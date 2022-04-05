@@ -13,7 +13,7 @@ app.use(cors());
 
 app.use('/posts', postRoutes)
 
-const CONNECTION_URL = 'mongodb+srv://mongogs:Flatiron2798@cluster0.itljy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+const CONNECTION_URL = process.env.REACT_APP_MONGODB_ROUTE
 
 const PORT = process.env.PORT || 4000;
 
