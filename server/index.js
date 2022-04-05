@@ -3,7 +3,7 @@ import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import postRoutes from './routes/posts.js'
-
+import 'dotenv/config'
 const app = express();
 
 
@@ -13,7 +13,8 @@ app.use(cors());
 
 app.use('/posts', postRoutes)
 
-const CONNECTION_URL = process.env.REACT_APP_MONGODB_ROUTE
+const CONNECTION_URL = process.env.MONGODB_ROUTE
+console.log(process.env.MONGODB_ROUTE)
 
 const PORT = process.env.PORT || 4000;
 
